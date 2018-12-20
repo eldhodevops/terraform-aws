@@ -178,12 +178,12 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 ```
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 Outputs:
-Availability Zone = us-east-1c
+Availability Zone = us-east-1a
 Security Group = [
     web-node
 ]
-Your Private IP = 172.31.86.70
-Your Public DNS = ec2-18-212-200-74.compute-1.amazonaws.com
-Your Public IP = 18.212.200.74
+Your Private IP = 172.31.39.116
+Your Public DNS = ec2-35-175-231-177.compute-1.amazonaws.com
+Your Public IP = 35.175.231.177
 ```
 
