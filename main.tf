@@ -1,7 +1,7 @@
 provider "aws" {
  region = "us-east-1"
- access_key = "provide your accesskey"
- secret_key = "provide your secretkey"
+ shared_credentials_file = "~/.aws/credentials"
+ profile                 = "profilename"
 }
 resource "aws_security_group" "web-node" {
         name = "web-node"
