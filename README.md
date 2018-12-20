@@ -51,7 +51,8 @@ unzip terraform_0.11.10_linux_amd64.zip
 The following example shows a credentials file with two profiles. The first is used when you run a CLI command with no profile, and the second is used when you run a CLI command with the --profile user1 parameter.
     Example: 
   ~/.aws/credentials   
-    ```
+ 
+ ```
 [default]
 aws_access_key_id=AKIAIOSFODNN7EXAMPLE
 aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
@@ -59,7 +60,7 @@ aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [user1]
 aws_access_key_id=AKIAI44QH8DHBEXAMPLE
 aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
-    ```
+ ```
     
  Each profile uses different credentials—perhaps from different IAM users—and can also use different regions and output formats:
 
