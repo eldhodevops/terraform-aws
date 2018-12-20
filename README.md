@@ -40,9 +40,9 @@ unzip terraform_0.11.10_linux_amd64.zip
 5: Clone repository:
    git clone https://github.com/eldhodevops/terraform-aws.git
 
-6: Edit main.tf file in the cloned repository for adding your access_key and secret_key of your user in AWS account
+6: Edit main.tf file in the cloned repository for addyour profile after create and configureing profile using below steps
 
-   If you have not created a user pleaes follow the steps to create IAM user with accees previalge:
+   If you have not created a user please follow the steps to create IAM user with accees previalges:
    
     Login to AWS console > Click on IAM > Add user > Create a user with programatic access with ec2full access ploicy and copy the access_key and secret_key and add it to main.tf file
     
