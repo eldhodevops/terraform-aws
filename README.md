@@ -42,17 +42,45 @@ unzip terraform_0.11.10_linux_amd64.zip
 
 6: Edit main.tf file in the cloned repository for adding your access_key and secret_key of your user in AWS account
 
-   If you have not created a user pleaee follow the steps to create IAM user with accees previalge:
+   If you have not created a user pleaes follow the steps to create IAM user with accees previalge:
    
     Login to AWS console > Click on IAM > Add user > Create a user with programatic access with ec2full access ploicy and copy the access_key and secret_key and add it to main.tf file
     
- 7: After adding the access_key and secret_key in your main.tf proceed with the below steps:
+ 7: Create a profile in your local machine using  below step
  
+The following example shows a credentials file with two profiles. The first is used when you run a CLI command with no profile, and the second is used when you run a CLI command with the --profile user1 parameter.
+    Example: 
+  ~/.aws/credentials   
+    ```
+[default]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+[user1]
+aws_access_key_id=AKIAI44QH8DHBEXAMPLE
+aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+    ```
+    
+ Each profile uses different credentials—perhaps from different IAM users—and can also use different regions and output formats:
+
+~/.aws/config
+```
+[default]
+region=us-west-2
+output=json
+
+[profile user1]
+region=us-east-1
+output=text   
+ ```
+7.1: add the profile name to main.tf file
+
  8: terraform plan
  
      Output will be as below:
      
      terraform plan
+```
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
@@ -142,10 +170,11 @@ Terraform will perform the following actions:
 Plan: 2 to add, 0 to change, 0 to destroy.
 
 ------------------------------------------------------------------------
+```
 
 9: terraform apply
    
-
+```
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 Outputs:
 Availability Zone = us-east-1c
@@ -155,5 +184,5 @@ Security Group = [
 Your Private IP = 172.31.86.70
 Your Public DNS = ec2-18-212-200-74.compute-1.amazonaws.com
 Your Public IP = 18.212.200.74
-
+```
 
